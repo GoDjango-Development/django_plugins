@@ -11,3 +11,9 @@ class Wrapper:
             self.reference_stack["anonymous"] += arg
         for arg in kwargs:
             self.reference_stack[arg] = kwargs[arg]
+    
+    def anon_push(self, element):
+        self.reference_stack["anonymous"].insert(0, element)
+    
+    def anon_append(self, element):
+        self.reference_stack["anonymous"].append(element)
